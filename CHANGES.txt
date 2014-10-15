@@ -1,0 +1,2 @@
+v0.1.0, 2012/09/25 -- Initial release.
+v0.1.1, 2013/01/08 -- enter fixed, attachements don't show path, unicode bodies allowed, charsets ofr the message body are set
