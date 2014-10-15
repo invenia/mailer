@@ -1,6 +1,7 @@
 """
 Creates a runnable suite of all tests in the mailer.test module.
 """
+from __future__ import absolute_import
 import unittest
 
 

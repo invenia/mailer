@@ -1,8 +1,9 @@
+from __future__ import absolute_import
 from distutils.core import setup
 
 setup(
     name='mailer',
-    version='0.1.1',
+    version='0.2.0',
     author='Brendan Curran-Johnson',
     author_email='brendan.curran.johnson@invenia.ca',
     packages=['mailer', 'mailer.test'],

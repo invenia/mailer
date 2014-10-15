@@ -1,6 +1,7 @@
 """
 A collection of unittests for the mailer module's Mailer object
 """
+from __future__ import absolute_import
 import unittest
 
 

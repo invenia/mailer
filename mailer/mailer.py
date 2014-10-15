@@ -1,11 +1,13 @@
 """
 The Mailer class provides a simple way to send emails.
 """
+from __future__ import absolute_import
 from email.mime.application import MIMEApplication
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 import os
 from smtplib import SMTP
+import six
 
 _ENCODING = 'utf-8'
 
@@ -74,7 +76,7 @@ class Mailer(object):
                      files that should be added to the message as
                      attachments. Default: None
         """
-        if isinstance(recipients, basestring):
+        if isinstance(recipients, six.string_types):
             recipients = [recipients]
 
         if mail_as is None:
@@ -82,17 +84,17 @@ class Mailer(object):
 
         if cc_recipients is None:
             cc_recipients = []
-        elif isinstance(cc_recipients, basestring):
+        elif isinstance(cc_recipients, six.string_types):
             cc_recipients = [cc_recipients]
 
         if bcc_recipients is None:
             bcc_recipients = []
-        elif isinstance(bcc_recipients, basestring):
+        elif isinstance(bcc_recipients, six.string_types):
             bcc_recipients = [bcc_recipients]
 
         if attachments is None:
             attachments = []
-        elif isinstance(attachments, basestring):
+        elif isinstance(attachments, six.string_types):
             attachments = [attachments]
 
         message = build_message_string(recipients, subject, body, mail_as,
